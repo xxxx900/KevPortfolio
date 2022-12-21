@@ -1,0 +1,46 @@
+.Header {
+    top: 1em;
+}
+
+.Header ul {
+    background-color: #333333;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;    
+}
+
+.Header ul li{
+    float: left;
+}
+
+.Header ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    float: left;
+    padding: 1em;
+}
+
+.Header ul li a:hover{
+    background-color: #111111;
+}
+
+.Footer {
+    bottom: 1em;
+}
+
+.Footer ul {
+    background-color: #333333;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;    
+}
+
+.Footer ul li{
+    display: block;
+    color: white;
+    float: right;
+    padding: 1em;
+}
