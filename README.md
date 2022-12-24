@@ -1,6 +1,6 @@
 # The portfolio of Kevin
 
-This application runs on AWS(EC2). You can access this webpage through "http://52.2.95.17". The domain register is in progress.
+This application runs on AWS(EC2). You can access this webpage through "http://kevkorcapaws.com/".
 
 ## Single Page Application.
 
