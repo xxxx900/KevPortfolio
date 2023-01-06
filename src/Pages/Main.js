@@ -4,7 +4,7 @@ function MainPage(props){
     const [apiAchievements, setApiAchievements] = useState([]);
     
     const fetchAchhievements = async () => {
-        await fetch("http://localhost:8000/achievements/")
+        await fetch("https://kevkorcapaws.com/api/achievements/")
         .then(res => res.json())
         .then(data => updateAchievements(data));
     }
