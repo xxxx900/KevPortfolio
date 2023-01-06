@@ -1,0 +1,32 @@
+{
+  "name": "first-app-backend",
+  "version": "1.0.0",
+  "description": "The backend with express js for the first-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "devStart": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xxxx900/KevPortfolio.git"
+  },
+  "keywords": [
+    "express",
+    "js",
+    "javascript"
+  ],
+  "author": "kyungbae",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xxxx900/KevPortfolio/issues"
+  },
+  "homepage": "https://github.com/xxxx900/KevPortfolio#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
