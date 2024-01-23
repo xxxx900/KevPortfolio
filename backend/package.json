@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/xxxx900/KevPortfolio#readme",
   "dependencies": {
+    "aws-sdk": "^2.1540.0",
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "pm2": "^5.2.2"

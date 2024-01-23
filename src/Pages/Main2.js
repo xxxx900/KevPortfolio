@@ -9,7 +9,7 @@ class MainPage2 extends React.Component{
         return (
             <div className="MainPage">
                 <p>
-                    Hi, my name is Kyungbae Cho, usually go by Kevin.
+                    Hi, my name is Kevin.
                 </p>
                 <p>
                     This website is to show what I'm interested in and have been doing in more detail.

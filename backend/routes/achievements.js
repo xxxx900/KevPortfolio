@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const AWS = require('aws-sdk');
+const client = new AWS.DynamoDB.DocumentClient();
+const tableName = 'Achievements'
 
 // const Values;
 
@@ -64,9 +67,11 @@ const defaultAchievements = [
         achievement: 'Motiviti Labs / contracted with Google',
         description: 'Create a web application utilizing AppMaker(Javascript for frontend and backend). The project resides in Google Cloud Platform. DB: Cloud SQL',
     },
-
-
 ]
+const params = {
+    TableName: tableName
+}
+const achievementsFromDB = 
 
 
 // "/achievements/" will return list of achievements.
@@ -76,5 +81,14 @@ router.get("/", (req, res) => {
     .post("/", (req, res) => {
 
     });
+
+
+// "/achievements/db" will return list of achievements.
+router.get("/db", (req, res) => {
+    client.scan(params, (err, data) => {
+
+    
+    })
+});
 
 module.exports = router
