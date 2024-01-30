@@ -21,7 +21,8 @@ function MainPage3(props){
             <div className="ReviewPage">
                 <div className="achievements">
                 {
-                    apiReviewsDB.map(review => {
+                    apiReviewsDB.map(reviewStr => {
+                        const review = JSON.parse(reviewStr);
                         let returnArr = [
                         <h1>{review.title}</h1>,  <h2>{review.tags.join(', ')}</h2>, <p>{review.description}</p>
                         ];
