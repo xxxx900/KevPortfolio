@@ -84,10 +84,14 @@ router.get("/", (req, res) => {
 
 
 // "/achievements/db" will return list of achievements.
-router.get("/db", (req, res) => {
+router.get("/db", (req, res, next) => {
     client.scan(params, (err, data) => {
-
-    
+        if(err){
+            next(err);
+        } else {
+            const strigified_data = data.Items.map(ele => JSON.stringify(ele))
+            res.send(JSON.stringify(strigified_data))
+        }
     })
 });
 

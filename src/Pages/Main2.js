@@ -16,7 +16,7 @@ class MainPage2 extends React.Component{
                 </p>
                 <p>
                     Take a look and contact me in &nbsp;
-                    <a href='https://www.linkedin.com/in/capkev/'>
+                    <a href='https://www.linkedin.com/in/capkev/' target='_blank'>
                         Linkedin
                     </a>
                     &nbsp;
