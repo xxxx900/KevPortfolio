@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const AWS = require('aws-sdk');
-const region = "us-west-2";
+const region = "us-east-1";
 AWS.config.update({ region })
 const tableName = 'Reviews'
 const client = new AWS.DynamoDB.DocumentClient();
