@@ -1,29 +1,29 @@
 import React, {useState, useEffect} from 'react';
 
 function MainPage3(props){
-    const [apiAchievementsDB, setApiAchievementsDB] = useState([]);
+    const [apiReviewsDB, setapiReviewsDB] = useState([]);
 
-    function updateAchievementsDB(newAchieve){
-        setApiAchievementsDB(newAchieve);
+    function updateReviewsDB(newAchieve){
+        setapiReviewsDB(newAchieve);
     }
 
-    const fetchAchievementsDB = async () => {
-        await fetch("https://kevkorcapaws.com/api/review/db")
+    const fetchReviewsDB = async () => {
+        await fetch("https://kevkorcapaws.com/api/reviews/db")
         .then(res => res.json())
-        .then(data => updateAchievementsDB(data));
+        .then(data => updateReviewsDB(data));
     }    
 
     useEffect(() => {
-        fetchAchievementsDB();
+        fetchReviewsDB();
     }, [])
 
     return (
             <div className="ReviewPage">
                 <div className="achievements">
                 {
-                    apiAchievementsDB.map(achieve => {
+                    apiReviewsDB.map(review => {
                         let returnArr = [
-                        <h1>{achieve.achievement}</h1>,  <h2>{achieve.tags.join(', ')}</h2>, <p>{achieve.description}</p>
+                        <h1>{review.title}</h1>,  <h2>{review.tags.join(', ')}</h2>, <p>{review.description}</p>
                         ];
                         return returnArr;
                     })

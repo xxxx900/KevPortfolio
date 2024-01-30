@@ -43,7 +43,7 @@ router.get("/db", (req, res, next) => {
         }
     })
 })
-    .post("/db/", (req, res) => {
+    .post("/db", (req, res) => {
         
     });
     
