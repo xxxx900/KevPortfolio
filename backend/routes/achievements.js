@@ -71,8 +71,6 @@ const defaultAchievements = [
 const params = {
     TableName: tableName
 }
-const achievementsFromDB = 
-
 
 // "/achievements/" will return list of achievements.
 router.get("/", (req, res) => {
@@ -89,8 +87,8 @@ router.get("/db", (req, res, next) => {
         if(err){
             next(err);
         } else {
-            const strigified_data = data.Items.map(ele => JSON.stringify(ele))
-            res.send(JSON.stringify(strigified_data))
+            const stringified_data = data.Items.map(ele => JSON.stringify(ele))
+            res.send(JSON.stringify(stringified_data))
         }
     })
 });

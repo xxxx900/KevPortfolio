@@ -1,19 +1,36 @@
 import React from 'react';
 
-class MainPage3 extends React.Component{
-    constructor(props){
-        super(props);
+function MainPage3(props){
+    const [apiAchievementsDB, setApiAchievementsDB] = useState([]);
+
+    function updateAchievementsDB(newAchieve){
+        setApiAchievementsDB(newAchieve);
     }
-    
-    render() {
-        return (
-            <div className="MainPage">
-                <p>
-                    Reviews
-                </p>
-            </div>    
+
+    const fetchAchievementsDB = async () => {
+        await fetch("https://kevkorcapaws.com/api/review/db")
+        .then(res => res.json())
+        .then(data => updateAchievementsDB(data));
+    }    
+
+    useEffect(() => {
+        fetchAchievementsDB();
+    }, [])
+
+    return (
+            <div className="ReviewPage">
+                <div className="achievements">
+                {
+                    apiAchievementsDB.map(achieve => {
+                        let returnArr = [
+                        <h1>{achieve.achievement}</h1>,  <h2>{achieve.tags.join(', ')}</h2>, <p>{achieve.description}</p>
+                        ];
+                        return returnArr;
+                    })
+                }
+                </div>
+            </div>
         )
-    }
 
 }
 export default MainPage3;

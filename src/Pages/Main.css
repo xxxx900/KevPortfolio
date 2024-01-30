@@ -46,7 +46,15 @@
 } */
 
 
-.MainPage {
+.achievements {
+    justify-content: center;
+    display: block;
+    color: white;
+    float: right;
+    padding: 1em;
+}
+
+.testAchievements {
     justify-content: center;
     display: block;
     color: white;

@@ -1,5 +1,10 @@
 const express = require('express');
 const router = express.Router();
+const client = new AWS.DynamoDB.DocumentClient();
+const tableName = 'Reviews'
+const params = {
+    TableName: tableName
+}
 
 // const Values;
 
@@ -25,4 +30,19 @@ router.get("/", (req, res) => {
         
     });
 
+router.get("/db", (req, res, next) => {
+    client.scan(params, (err, data) => {
+        if(err){
+            next(err);
+        } else {
+            const stringified_data = data.Items.map(ele => JSON.stringify(ele))
+            res.send(JSON.stringify(stringified_data))
+        }
+    })
+})
+    .post("/db/", (req, res) => {
+        
+    });
+    
+    
 module.exports = router
