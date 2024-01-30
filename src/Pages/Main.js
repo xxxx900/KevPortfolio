@@ -51,7 +51,8 @@ function MainPage(props){
                 </div>
                 <div className="testAchievements">
                     {
-                        apiAchievementsDB.map(achieve => {
+                        apiAchievementsDB.map(achieveStr => {
+                            const achieve = JSON.parse(achieveStr);
                             let returnArr = [
                                 <h1>{achieve.achievement}</h1>,  <h2>{achieve.tags.join(', ')}</h2>, <p>{achieve.description}</p>
                                 ];
