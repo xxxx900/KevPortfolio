@@ -4,7 +4,7 @@ const AWS = require('aws-sdk');
 const region = "us-west-2";
 AWS.config.update({ region })
 const tableName = 'Achievements'
-const client = new AWS.DynamoDB().DocumentClient();
+const client = new AWS.DynamoDB.DocumentClient();
 
 // const Values;
 
