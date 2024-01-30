@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const AWS = require('aws-sdk');
-const client = new AWS.DynamoDB({ region }).DocumentClient();
-
 const tableName = 'Reviews'
 const region = "us-west-2";
+const client = new AWS.DynamoDB({ region }).DocumentClient;
 const params = {
     TableName: tableName
 }

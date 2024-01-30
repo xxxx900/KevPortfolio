@@ -1,8 +1,10 @@
 const express = require('express');
 const router = express.Router();
 const AWS = require('aws-sdk');
-const client = new AWS.DynamoDB.DocumentClient();
+const region = "us-west-2";
+AWS.config.update({ region })
 const tableName = 'Achievements'
+const client = new AWS.DynamoDB().DocumentClient;
 
 // const Values;
 
